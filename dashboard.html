@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="members.html">Adhérents</a>
+<a href="subscriptions.html">Abonnements</a>
+<a href="planning.html">Planning</a>
+<a href="clubs.html">Clubs</a>
+<button onclick="logout()">Déconnexion</button>
+</nav>
+
+<main>
+<h1>Tableau de bord</h1>
+<div class="stats">
+<div id="statMembers"></div>
+<div id="statRevenue"></div>
+</div>
+</main>
+
+<script src="js/auth.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clubs</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="members.html">Adhérents</a>
+<a href="subscriptions.html">Abonnements</a>
+<a href="planning.html">Planning</a>
+<a href="clubs.html">Clubs</a>
+<button onclick="logout()">Déconnexion</button>
+</nav>
+<h2>Clubs</h2>
+
+<input id="clubName" placeholder="Nom du club">
+<input id="coachName" placeholder="Coach">
+<input id="coachPhone" placeholder="Téléphone coach">
+
+<button onclick="addClub()">Ajouter Club</button>
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom du Club</th>
+      <th>Coach</th>
+      <th>Téléphone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="clubList"></tbody>
+</table>
+
+<script src="js/storage.js"></script>
+<script src="js/clubs.js"></script>
+</body>
+</html>

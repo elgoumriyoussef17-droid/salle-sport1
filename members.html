@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>membre</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="members.html">Adhérents</a>
+<a href="subscriptions.html">Abonnements</a>
+<a href="planning.html">Planning</a>
+<a href="clubs.html">Clubs</a>
+<button onclick="logout()">Déconnexion</button>
+</nav>
+<h2>Gestion des adhérents</h2>
+
+<form id="member-form">
+  <input id="firstname" placeholder="Prénom">
+  <input id="lastname" placeholder="Nom">
+  <input id="phone" placeholder="Téléphone">
+  <input id="age" type="number" placeholder="Âge">
+  <input type="hidden" id="edit-id">
+  <select id="club">
+    <option value="">Choisir un club</option>
+    <option>Boxe</option>
+    <option>Spinning</option>
+    <option>Natation</option>
+    <option>Crossfit</option>
+  </select>
+  <button type="submit" id="add-btn">Ajouter</button>
+<button type="button" id="update-btn" style="display:none;">Mettre à jour</button>
+</form>
+
+<table border="1" width="100%" style="margin-top:20px;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Prénom</th>
+      <th>Nom</th>
+      <th>Téléphone</th>
+      <th>Âge</th>
+      <th>Club</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="members-table-body"></tbody>
+</table>
+
+<script src="js/members.js"></script>

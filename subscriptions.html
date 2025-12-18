@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Abonnements</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="members.html">Adhérents</a>
+    <a href="subscriptions.html">Abonnements</a>
+    <a href="planning.html">Planning</a>
+    <a href="clubs.html">Clubs</a>
+    <button onclick="logout()">Déconnexion</button>
+  </nav>
+
+  <main>
+<h2>Gestion des abonnements</h2>
+
+<form id="subscription-form">
+  
+  <!-- Liste des membres -->
+  <select id="member-select">
+    <option value="">Choisir un membre</option>
+  </select>
+
+  <select id="type">
+    <option value="">Type</option>
+    <option>Mensuel : 200DH</option>
+    <option>Trimestriel : 550DH</option>
+    <option>Annuel : 2200DH</option>
+    <option>Séance Unique : 50DH</option>
+  </select>
+
+  <input type="number" id="price" placeholder="Prix en DH">
+  <input type="date" id="start">
+  <input type="date" id="end">
+
+
+  <input type="hidden" id="edit-id">
+
+  <button type="submit" id="add-btn">Ajouter</button>
+  <button type="button" id="update-btn" style="display:none;">Mettre à jour</button>
+</form>
+
+
+<table border="1" width="100%" style="margin-top:20px;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Membre</th>
+      <th>Type</th>
+      <th>Prix</th>
+      <th>Début</th>
+      <th>Fin</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="subscriptions-table-body"></tbody>
+</table>
+
+
+<script src="js/subscriptions.js"></script>
+
+</body>
+</html>

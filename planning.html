@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Planning</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="members.html">Adhérents</a>
+<a href="subscriptions.html">Abonnements</a>
+<a href="planning.html">Planning</a>
+<a href="clubs.html">Clubs</a>
+<button onclick="logout()">Déconnexion</button>
+</nav>
+<h2>Planning</h2>
+
+<input id="courseName" placeholder="Cours (ex: Yoga)">
+<input type="date" id="courseDate">
+<input type="time" id="courseTime">
+
+<select id="coachSelect"></select>
+<select id="clubSelect"></select>
+
+<button onclick="addPlanning()">Ajouter Planning</button>
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cours</th>
+      <th>Date</th>
+      <th>Heure</th>
+      <th>Coach</th>
+      <th>Club</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="planningList"></tbody>
+</table>
+
+
+<script src="js/storage.js"></script>
+<script src="js/planning.js"></script>
+</body>
+</html>
